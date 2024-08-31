@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoosier Lottery</title>
+</head>
+
+<h1>Lottery</h1>
+
+<h2 class="LotFor"></h2>
+
+<h2 class="LotWhile"></h2>
+
+</body>
+
+<script>
+
+let LotStrFor;
+
+let lotStr = "";
+
+let refToLotFor = document.querySelector(".LotFor");
+
+let lot;
+
+let refToLotWhile = document.querySelector(".LotWhile");
+
+
+for (let num = 0; num < 6; num++) {
+
+  lot = Math.floor(Math.random() * 50);
+
+  lotStr += " " + lot.toString() + (num < 5 ? " -" : "");
+
+}
+
+console.log(lotStr);
+
+refToLotFor.textContent = lotStr;
+
+let number = 0;
+
+lotStr = "";
+
+while (number < 6) {
+
+  lot = Math.floor(Math.random() * 49) + 1;
+
+  lotStr += " " + lot.toString() + (number < 5 ? " -" : "");
+
+  number++;
+
+}
+
+console.log(lotStr);
+
+refToLotWhile.textContent = lotStr;
+
+</script>
+</html>
